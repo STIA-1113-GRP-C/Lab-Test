@@ -1,0 +1,40 @@
+package Lab_Test_1;
+import java.util.Scanner;
+public class Question_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		double sale, comm, wages;
+		int hour;
+		
+		System.out.print("Enter sales : RM ");
+		sale = sc.nextDouble();
+		System.out.print("Enter hour worked : ");
+		hour = sc.nextInt();
+		
+		if (sale >= 150 && sale <= 300)
+			comm = sale * 0.05;
+		else if (sale <= 500)
+			comm = sale * 0.1;
+		else
+			comm = sale * 0.15;
+		
+		wages =( 5 * hour) + 50;
+		
+		System.out.println();
+		
+		System.out.printf("Commision   : RM %.2f", comm);
+		System.out.printf("\nDaily Wages : RM %.2f", wages);
+
+	}
+
+}
+
+
+OUTPUT
+Enter sales : RM 500
+Enter hour worked : 5
+
+Commision   : RM 50.00
+Daily Wages : RM 75.00

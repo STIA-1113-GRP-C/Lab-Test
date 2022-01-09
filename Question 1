@@ -1,0 +1,69 @@
+package Lab_Test_1;
+import java.util.Scanner;
+public class Question_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int f_item, s_item, t_item, item;
+		double f_price, s_price, t_price, total, discount, nett;
+		
+		System.out.print("Enter the number of items: ");
+		item = sc.nextInt();
+		
+		if (item < 4) {
+		System.out.print("Enter price of first item: RM ");
+		f_price = sc.nextDouble();
+		System.out.print("Enter quantity of first item: ");
+		f_item = sc.nextInt();
+		System.out.println();
+		System.out.print("Enter price of second item: RM ");
+		s_price= sc.nextDouble();
+		System.out.print("Enter quantity of second item: ");
+		s_item = sc.nextInt();
+		System.out.println();
+		System.out.print("Enter price of third item: RM ");
+		t_price = sc.nextDouble();
+		System.out.print("Enter quantity of third item: ");
+		t_item = sc.nextInt();
+		
+		total = (f_price * f_item) + (s_price * s_item) + (t_price * t_item);
+		if  (total > 100) 
+		    discount = 0.2 * total;
+		else
+			discount = 0.1 * total;
+		
+		nett = total - discount;
+		System.out.println();
+		System.out.printf("Total price       : RM %.2f",total);  
+		System.out.printf("\nDiscount received : RM %.2f",discount);
+		System.out.printf("\nPrice to be paid  : RM %.2f",nett);}
+		
+		else
+			System.out.println("Sorry you can only choose 3 item only");
+	
+		 
+		
+		
+		
+		
+
+	}
+
+}
+
+OUTPUT
+Enter the number of items: 3
+Enter price of first item: RM 150
+Enter quantity of first item: 2
+
+Enter price of second item: RM 50
+Enter quantity of second item: 3
+
+Enter price of third item: RM 30
+Enter quantity of third item: 1
+
+Total price       : RM 480.00
+Discount received : RM 96.00
+Price to be paid  : RM 384.00

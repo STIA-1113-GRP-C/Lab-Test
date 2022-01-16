@@ -1,0 +1,49 @@
+package Lab_Test_1;
+import java.util.Scanner;
+public class CheckOddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+        int num, nums, i = 0;
+        System.out.print("Enter amaount of number you want enter : ");
+		nums = sc.nextInt();
+	
+		
+		
+		while (i < nums) {
+			System.out.println("Please enter the number");
+			num = sc.nextInt();
+		if (num % 2 == 0) {
+			System.out.println("Even Number");
+		}
+		else
+			System.out.println("Odd Number");
+		i++;
+		}
+		System.out.println("bye!");
+
+	}
+
+}
+OUTPUT
+Enter amaount of number you want enter : 6
+Please enter the number
+0
+Even Number
+Please enter the number
+1
+Odd Number
+Please enter the number
+88
+Even Number
+Please enter the number
+99
+Odd Number
+Please enter the number
+-1
+Odd Number
+Please enter the number
+-2
+Even Number
+bye!

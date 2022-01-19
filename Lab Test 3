@@ -1,22 +1,47 @@
 package Lab_Test_3;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 public class wordCount {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		String word [] = new String[6];
+		int num;
+		System.out.print("Enter the number of words : ");
+		num = sc.nextInt();
+		System.out.println();
+		String word [] = new String[num];
 		 System.out.println("Please enter 6 word : ");
-		 for(int i = 0; i < 6; i++) {
-			 word[i] = sc.nextLine();
+		 for(int i = 0; i < num; i++) {
+			 word[i] = sc.next();
 		 }
-		
-		
-
+		 System.out.println();
+		 wordCount(word, num);
 	}
-
+	static void wordCount (String[] word, int num) {
+		Map<String, Integer > count = new HashMap < String, Integer > ();
+		for(String words: word) {
+			if(count.containsKey(word)) {
+				count.put(words, count.get(words)+1);
+			}
+			else {
+				count.put(words,1);
+			}
+		}
+            Set<String> wordsString = count.keySet();
+		
+		    for(String words: wordsString) {
+			      if(count.get(words)>0) {
+				     System.out.println(words + " : " + count.get(words));
+			}
+		}
+	}
 }
 OUTPUT
+Enter the number of words : 6
+
 Please enter 6 word : 
 hello
 world
@@ -24,3 +49,8 @@ hello
 germany
 hello
 berlin
+
+world : 1
+germany : 1
+hello : 3
+berlin : 1
